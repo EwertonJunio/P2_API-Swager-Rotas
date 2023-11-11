@@ -4,7 +4,7 @@ const swaggerSpec = require('./swagger');
 
 const app = express();
 
-// ... suas configurações e rotas aqui
+// configurações e rotas    
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
