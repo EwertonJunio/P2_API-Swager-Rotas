@@ -1,5 +1,5 @@
 /**
- * @swagger
+@swagger
  * tags:
  *   name: Usuários
  *   description: Rotas relacionadas a usuários
