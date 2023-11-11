@@ -1,5 +1,12 @@
 /**
  * @swagger
+ * tags:
+ *   name: Usuários
+ *   description: Rotas relacionadas a usuários
+ */
+
+/**
+ * @swagger
  * /:
  *   get:
  *     summary: Rota principal
@@ -9,22 +16,29 @@
  *         description: Sucesso, retorna a mensagem da rota principal
  *       500:
  *         description: Erro no servidor ao acessar a rota principal
- *
+ */
+
+/**
  * @swagger
  * /api/user:
  *   get:
  *     summary: Retorna todos os usuários
  *     description: Obtém a lista de todos os usuários cadastrados
+ *     tags: [Usuários]
  *     responses:
  *       200:
  *         description: Sucesso, retorna a lista de usuários
  *       500:
  *         description: Erro no servidor ao obter a lista de usuários
- * 
+ */
+
+/**
+ * @swagger
  * /api/users:
  *   post:
  *     summary: Adiciona um usuário
  *     description: Adiciona um novo usuário à lista de usuários
+ *     tags: [Usuários]
  *     responses:
  *       200:
  *         description: Sucesso, retorna a confirmação de adição do usuário
