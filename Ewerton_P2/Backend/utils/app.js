@@ -16,7 +16,7 @@ const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 app.use(express.json());
 app.use(cors());
 
-// Adicionando rotas protegidas com JWT
+// rotas protegidas com JWT
 app.use("/auth", jwtAuthRoutes);
 
 const server = http.createServer(app);
