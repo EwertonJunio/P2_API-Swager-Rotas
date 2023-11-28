@@ -3,8 +3,8 @@ const socketIo = require("socket.io");
 const http = require("http");
 const app = express();
 const cors = require("cors");
-const formatMessage = require("./utils/messages");
-const usersModule = require("./utils/User"); // Atualizado para User.js
+const formatMessage = require("./messages");
+const usersModule = require("./User"); // Atualizado para User.js
 
 const port = process.env.PORT || 3000;
 const JOIN_ROOM = "joinRoom";
@@ -55,8 +55,8 @@ io.on("connection", socket => {
     });
 });
 
-app.use("/", require("./routes/index"));
-app.use("/auth", require("./routes/jwtAuth"));
+app.use("/", require("../routes/index"));
+app.use("/auth", require("../routes/jwtAuth"));
 
 server.listen(port, () => {
     console.log(`Listening on port ${port}`);

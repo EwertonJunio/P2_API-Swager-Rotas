@@ -3,10 +3,10 @@ require('dotenv').config();
 
 const dbUsername = process.env.DB_USER;
 const dbPassword = process.env.DB_PASS;
-const dbName = 'nome_do_seu_banco';
-const dbCluster = 'cluster.mongodb.net';
+const dbName = process.env.DB_NAME;
+const dbHost = process.env.DB_HOST;
 
-const DB_URI = `mongodb+srv://${dbUsername}:${dbPassword}@${dbCluster}/${dbName}?retryWrites=true&w=majority`;
+const DB_URI = `mongodb+srv://${dbUsername}:${dbPassword}@${dbHost}/${dbName}?retryWrites=true&w=majority`;
 
 const connectToDatabase = async() => {
     try {
